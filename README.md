@@ -29,8 +29,10 @@ Find out the local IP address of your bridge, then type it into a web browser, w
 Next, create a free [Hue Developers account](https://developers.meethue.com/login/?redirect_to=https%3A%2F%2Fdevelopers.meethue.com%2Fdevelop%2Fhue-api%2F) to access the Hue API documentation and get yourself started. Follow the steps to create an API key, and try some GET and PUT requests in the debug client to control your lights. 
 
 Nanoleaf doesn't have a fancy GUI like the hue bridge, but if you want to control nanoleaf panels, the process is pretty much the same as Hue. Create a dev account [here](https://forum.nanoleaf.me/users/sign_in) and learn how to get an api key. 
-You could do this in Python with a few simple lines of code (install the requests lib first)
+You could do this in Python with a few simple lines of code (install the requests lib first).  
+ I should note that the included example code will be using the nanoleaf panels. You can adapt it to include hue lights as well.
 ```
+# Written for Python 3. Requires the requests library (pip install requests)
 # Hold the power button for 5-7s until the light flashes rapidly, then run this script to get an api key.
 # Change the IP to the IP of your nanoleaf panels, but leave the port as 16021. You may find them in your network
 # with the alias "IEEE REGISTRATION AUTHORITY"
@@ -41,3 +43,10 @@ nanoleaf="http://192.168.1.94:16021/api/v1/new"
 r = requests.post(nanoleaf, data=None)
 print(r.text)
 ```
+## The Code
+Finally, download or copy-paste the code in [tna_lights_example.ino](tna_lights_example.ino) into your Arduino IDE.  
+Be sure to download the Arduino Json V5 library from the libraries manager.  
+Select your board (NodeMCU 1.0 (ESP-12E Module) in this case) and your port, and upload!
+
+## Troubleshooting
+My ESP wasn't displaying output on the serial monitor from the factory, so if you run into a similar issue, try flashing stock firmware to it with [this guide.](https://www.instructables.com/id/Program-Any-ESP8266-Boardmodule-With-AT-Commands-F/)
