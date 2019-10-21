@@ -45,7 +45,8 @@ print(r.text)
 ```
 ## The Code
 Finally, download or copy-paste the code in [tna_lights_example.ino](tna_lights_example.ino) into your Arduino IDE.  
-Be sure to download the Arduino Json V5 library from the libraries manager.  
+Be sure to download the Arduino Json V5 library from the libraries manager.
+Read the comments in the code and update it with your specific information, such as WiFi, io pins, scene name, etc.
 Select your board (NodeMCU 1.0 (ESP-12E Module) in this case) and your port, and upload!
 
 ## Troubleshooting
