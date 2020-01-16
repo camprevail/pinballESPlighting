@@ -51,3 +51,4 @@ Select your board (NodeMCU 1.0 (ESP-12E Module) in this case) and your port, and
 
 ## Troubleshooting
 My ESP wasn't displaying output on the serial monitor from the factory, so if you run into a similar issue, try flashing stock firmware to it with [this guide.](https://www.instructables.com/id/Program-Any-ESP8266-Boardmodule-With-AT-Commands-F/)
+
